@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2010 The Android Open Source Project
  * Copyright (C) 2014 The CyanogenMod Project
+ * Copyright (C) 2015 MaxiCM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -59,7 +60,7 @@ public class PlatLogoActivity extends Activity {
     int mKeyCount;
     PathInterpolator mInterpolator = new PathInterpolator(0f, 0f, 0.5f, 1f);
 
-    private boolean mIsCM;
+    private boolean mIsMAXI;
 
     static int newColorIndex() {
         return 2*((int) (Math.random()*FLAVORS.length/2));
@@ -79,7 +80,7 @@ public class PlatLogoActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mIsCM = getIntent().hasExtra("is_cm");
+        mIsMAXI = getIntent().hasExtra("is_maxi");
         mLayout = new FrameLayout(this);
         setContentView(mLayout);
     }
@@ -135,7 +136,7 @@ public class PlatLogoActivity extends Activity {
         im.setTranslationZ(20);
         im.setScaleX(0);
         im.setScaleY(0);
-        final Drawable platlogo = getDrawable(mIsCM
+        final Drawable platlogo = getDrawable(mIsMAXI
                 ? com.android.internal.R.drawable.cm_platlogo
                 : com.android.internal.R.drawable.platlogo);
         platlogo.setAlpha(0);
@@ -194,7 +195,7 @@ public class PlatLogoActivity extends Activity {
                                                 .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
                                                         | Intent.FLAG_ACTIVITY_CLEAR_TASK
                                                         | Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
-                                                .putExtra("is_cm", mIsCM)
+                                                .putExtra("is_maxi", mIsMAXI)
                                                 .addCategory("com.android.internal.category.PLATLOGO"));
                                     } catch (ActivityNotFoundException ex) {
                                         Log.e("PlatLogoActivity", "No more eggs.");
