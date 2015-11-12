@@ -13,6 +13,10 @@
 -->
 <resources>
 
-<java-symbol type="drawable" name="maxi_platlogo" />
+    <!-- Maxi Platlogo -->
+    <java-symbol type="drawable" name="maxi_platlogo" />
+
+    <!-- Fast charge path -->
+    <java-symbol type="string" name="config_fast_charge_path" />
 
 </resources>

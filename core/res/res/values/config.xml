@@ -2420,4 +2420,7 @@
 
     <!-- Show WiFi activity indicators on signal bar -->
     <bool name="config_showWifiActivityIndicators">true</bool>
+
+    <!-- Fast charge path -->
+    <string name="config_fast_charge_path"></string>
 </resources>
