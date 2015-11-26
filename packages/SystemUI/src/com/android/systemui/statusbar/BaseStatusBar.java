@@ -689,7 +689,7 @@ public abstract class BaseStatusBar extends SystemUI implements
     public void updatePieControls(boolean reset) {
         ContentResolver resolver = mContext.getContentResolver();
 
-       if (reset) {
+        if (reset) {
             Settings.System.putIntForUser(resolver,
                     Settings.System.PIE_GRAVITY, 0, UserHandle.USER_CURRENT);
             toggleOrientationListener(false);
@@ -703,7 +703,7 @@ public abstract class BaseStatusBar extends SystemUI implements
             mPieController.init(mContext, mWindowManager, this);
         }
         int gravity = Settings.System.getInt(resolver,
-               Settings.System.PIE_GRAVITY, 0);
+                Settings.System.PIE_GRAVITY, 0);
         mPieController.resetPie(!reset, gravity);
     }
 
@@ -714,7 +714,7 @@ public abstract class BaseStatusBar extends SystemUI implements
                 return;
             } else {
                 boolean shouldEnable = Settings.System.getIntForUser(mContext.getContentResolver(),
-                       Settings.System.PIE_STATE, 0, UserHandle.USER_CURRENT) == 1;
+                        Settings.System.PIE_STATE, 0, UserHandle.USER_CURRENT) == 1;
                 if (shouldEnable) {
                     // Re-init Orientation listener for later action
                     getOrientationListener();
@@ -746,6 +746,7 @@ public abstract class BaseStatusBar extends SystemUI implements
                         mOrientation = rotation;
                     }
                 }
+            };
     }
 
     protected void notifyUserAboutHiddenNotifications() {
