@@ -3568,8 +3568,14 @@ public final class Settings {
          * @hide
          */
         public static final String STATUSBAR_COMPONENT = "statusbar_component";
-
+        
         /**
+         * Toast animations
+         * @hide
+         */
+         public static final String TOAST_ANIMATION = "toast_animation";
+ 
+       /**
          * Pie control panel. Meet him on the spot.
          * 0 = off
          * 1 = on
