@@ -3462,6 +3462,11 @@ public final class Settings {
         public static final String GESTURES_DOUBLE_TAP = "gestures_double_tap";
 
         /**
+        * @hide
+        */
+        public static final String SHOW_HEADSET_ICON = "show_headset_icon";
+
+        /**
          * Whether lock-to-app will be triggered by long-press on recents.
          * @hide
          */
